@@ -1,5 +1,7 @@
 // Write your code here
 
+import './index.css'
+
 const CommentItem = props => {
   const {commentDetails} = props
   const {id, date, comment, name, isLiked} = commentDetails
@@ -8,31 +10,35 @@ const CommentItem = props => {
     ? 'https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png'
     : 'https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png'
   return (
-    <li>
-      <div>
-        <div>
-          <p> {initial} </p>
+    <li className="comment-item">
+      <div className="comment-container">
+        <div className="initial-container">
+          <p className="initial"> {initial} </p>
         </div>
         <div>
-          <div>
-            <p> {name} </p>
-            <p> {date} </p>
+          <div className="username-time-container">
+            <p className="username"> {name} </p>
+            <p className="time"> {date} </p>
           </div>
-          <p> {comment}</p>
+          <p className="comment"> {comment}</p>
         </div>
       </div>
-      <div>
-        <div>
-          <img src={likedImgUrl} alt="like" />
-          <button type="button">Like</button>
+      <div className="buttons-container">
+        <div className="like-container">
+          <img className="like-image" src={likedImgUrl} alt="like" />
+          <button type="button" className="button">
+            Like
+          </button>
         </div>
-        <button>
+        <button className="button">
           <img
             src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png"
             alt="delete"
+            className="delete"
           />
         </button>
       </div>
+      <hr className="comment-line" />
     </li>
   )
 }

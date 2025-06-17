@@ -39,24 +39,43 @@ class Comments extends Component {
   render() {
     const {commentsList} = this.state
     return (
-      <div>
-        <div>
-          <h1> Comments </h1>
-          <div>
-            <form>
-              <p> Say something about 4.0 Technologies </p>
-              <input type="text" placeholder="Your Name" />
-              <textarea rows="6" placeholder="Your Comment"></textarea>
-              <button type="submit"> Add Comment </button>
+      <div className="app-container">
+        <div className="comments-container">
+          <h1 className="app-heading"> Comments </h1>
+          <div className="comments-input">
+            <form className="form">
+              <p className="form-description">
+                {' '}
+                Say something about 4.0 Technologies{' '}
+              </p>
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="name-input"
+              />
+              <textarea
+                rows="6"
+                placeholder="Your Comment"
+                className="comment-input"
+              />
+              <button type="submit" className="add-button">
+                {' '}
+                Add Comment{' '}
+              </button>
             </form>
-            <img src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png" alt="comments" />
+            <img
+              className="image"
+              src="https://assets.ccbp.in/frontend/react-js/comments-app/comments-img.png"
+              alt="comments"
+            />
           </div>
-          <hr />
-          <p>
+          <hr className="line" />
+          <p className="heading">
             {' '}
-            <span> {commentsList.length} </span> Comments{' '}
+            <span className="comments-count"> {commentsList.length} </span>{' '}
+            Comments{' '}
           </p>
-          <ul> {this.renderCommentsList()}</ul>
+          <ul className="comments-list"> {this.renderCommentsList()}</ul>
         </div>
       </div>
     )
