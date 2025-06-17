@@ -52,7 +52,6 @@
   color: #ffffff;
   font-family: 'Roboto';
   font-size: 16px;
-  background-color: black;
   margin: 0;
 }
 
@@ -123,4 +122,8 @@
 .comment-line {
   width: 100%;
   border: 1px solid #dee0e3;
+}
+
+.active {
+  color: #0ea5e9;
 }
